@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "Bash(python -c \":*)",
+      "Bash(python -:*)",
+      "Bash(python write_chunks.py)",
+      "Bash(\"C:\\\\Users\\\\lucha\\\\OneDrive\\\\Escritorio\\\\Tareas-ML\\\\write_chunks.py\":*)",
+      "Bash(powershell -Command \":*)",
+      "Bash(python merge_chunks.py)",
+      "Bash(python -W ignore merge_chunks.py)",
+      "Bash(python -c \"from pathlib import Path; Path\\(''tmp_chunk1.json''\\).write_text\\(''{\"\"nodes\"\":[],\"\"edges\"\":[],\"\"hyperedges\"\":[],\"\"input_tokens\"\":0,\"\"output_tokens\"\":0}''\\)\")",
+      "Bash(powershell -Command \"python write_chunks.py\")"
+    ]
+  }
+}

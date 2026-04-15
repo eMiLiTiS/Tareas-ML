@@ -1,0 +1,2751 @@
+{
+  "nodes": [
+    {
+      "id": "postcss_config_js",
+      "label": "postcss.config.js",
+      "file_type": "code",
+      "source_file": "postcss.config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "tailwind_config_js",
+      "label": "tailwind.config.js",
+      "file_type": "code",
+      "source_file": "tailwind.config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "vite_config_ts",
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "vite.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_tsx",
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "src\\App.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_app",
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src\\App.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_main_tsx",
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "src\\main.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_vite_env_d_ts",
+      "label": "vite-env.d.ts",
+      "file_type": "code",
+      "source_file": "src\\vite-env.d.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_auth_auth_context_tsx",
+      "label": "auth-context.tsx",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "auth_context_normalizecliniccode",
+      "label": "normalizeClinicCode()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L48"
+    },
+    {
+      "id": "auth_context_fallbackclinicname",
+      "label": "fallbackClinicName()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L52"
+    },
+    {
+      "id": "auth_context_fromclinicrow",
+      "label": "fromClinicRow()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L57"
+    },
+    {
+      "id": "auth_context_fromprofilerow",
+      "label": "fromProfileRow()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L65"
+    },
+    {
+      "id": "auth_context_loadclinicbyid",
+      "label": "loadClinicById()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L79"
+    },
+    {
+      "id": "auth_context_createclinic",
+      "label": "createClinic()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L92"
+    },
+    {
+      "id": "auth_context_resolveclinicforsession",
+      "label": "resolveClinicForSession()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L109"
+    },
+    {
+      "id": "auth_context_loadorcreateprofile",
+      "label": "loadOrCreateProfile()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L134"
+    },
+    {
+      "id": "auth_context_authprovider",
+      "label": "AuthProvider()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L193"
+    },
+    {
+      "id": "src_auth_auth_gate_tsx",
+      "label": "auth-gate.tsx",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-gate.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "auth_gate_authgate",
+      "label": "AuthGate()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-gate.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_auth_auth_screen_tsx",
+      "label": "auth-screen.tsx",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-screen.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "auth_screen_handlesubmit",
+      "label": "handleSubmit()",
+      "file_type": "code",
+      "source_file": "src\\auth\\auth-screen.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_components_appointments_appointment_card_tsx",
+      "label": "appointment-card.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\appointments\\appointment-card.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "appointment_card_formatdate",
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "src\\components\\appointments\\appointment-card.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "appointment_card_formatdatetime",
+      "label": "formatDateTime()",
+      "file_type": "code",
+      "source_file": "src\\components\\appointments\\appointment-card.tsx",
+      "source_location": "L18"
+    },
+    {
+      "id": "src_components_appointments_appointment_form_tsx",
+      "label": "appointment-form.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\appointments\\appointment-form.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "appointment_form_appointmentform",
+      "label": "AppointmentForm()",
+      "file_type": "code",
+      "source_file": "src\\components\\appointments\\appointment-form.tsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_components_dashboard_stats_card_tsx",
+      "label": "stats-card.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\dashboard\\stats-card.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "stats_card_statscard",
+      "label": "StatsCard()",
+      "file_type": "code",
+      "source_file": "src\\components\\dashboard\\stats-card.tsx",
+      "source_location": "L44"
+    },
+    {
+      "id": "src_components_layout_header_tsx",
+      "label": "header.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "header_gettodayshort",
+      "label": "getTodayShort()",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_components_layout_sidebar_tsx",
+      "label": "sidebar.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\sidebar.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_patients_patient_card_tsx",
+      "label": "patient-card.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\patients\\patient-card.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_patients_patient_form_tsx",
+      "label": "patient-form.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\patients\\patient-form.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "patient_form_patientform",
+      "label": "PatientForm()",
+      "file_type": "code",
+      "source_file": "src\\components\\patients\\patient-form.tsx",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_components_tasks_task_card_tsx",
+      "label": "task-card.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "task_card_handlesavenumber",
+      "label": "handleSaveNumber()",
+      "file_type": "code",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L27"
+    },
+    {
+      "id": "task_card_handlekeydown",
+      "label": "handleKeyDown()",
+      "file_type": "code",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L38"
+    },
+    {
+      "id": "task_card_string",
+      "label": "String()",
+      "file_type": "code",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L151"
+    },
+    {
+      "id": "src_components_tasks_task_filters_tsx",
+      "label": "task-filters.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\tasks\\task-filters.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_tasks_task_list_tsx",
+      "label": "task-list.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\tasks\\task-list.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_ui_badge_tsx",
+      "label": "badge.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\badge.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "badge_badge",
+      "label": "Badge()",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\badge.tsx",
+      "source_location": "L72"
+    },
+    {
+      "id": "src_components_ui_button_tsx",
+      "label": "button.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\button.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "button_button",
+      "label": "Button()",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\button.tsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_components_ui_input_tsx",
+      "label": "input.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\input.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_ui_modal_tsx",
+      "label": "modal.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\modal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "modal_modal",
+      "label": "Modal()",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\modal.tsx",
+      "source_location": "L18"
+    },
+    {
+      "id": "modal_confirmmodal",
+      "label": "ConfirmModal()",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\modal.tsx",
+      "source_location": "L81"
+    },
+    {
+      "id": "src_data_seed_ts",
+      "label": "seed.ts",
+      "file_type": "code",
+      "source_file": "src\\data\\seed.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "seed_generatedailytasks",
+      "label": "generateDailyTasks()",
+      "file_type": "code",
+      "source_file": "src\\data\\seed.ts",
+      "source_location": "L314"
+    },
+    {
+      "id": "src_hooks_use_appointments_ts",
+      "label": "use-appointments.ts",
+      "file_type": "code",
+      "source_file": "src\\hooks\\use-appointments.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "use_appointments_useappointments",
+      "label": "useAppointments()",
+      "file_type": "code",
+      "source_file": "src\\hooks\\use-appointments.ts",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_hooks_use_patients_ts",
+      "label": "use-patients.ts",
+      "file_type": "code",
+      "source_file": "src\\hooks\\use-patients.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "use_patients_usepatients",
+      "label": "usePatients()",
+      "file_type": "code",
+      "source_file": "src\\hooks\\use-patients.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_hooks_use_settings_ts",
+      "label": "use-settings.ts",
+      "file_type": "code",
+      "source_file": "src\\hooks\\use-settings.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "use_settings_usesettings",
+      "label": "useSettings()",
+      "file_type": "code",
+      "source_file": "src\\hooks\\use-settings.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_hooks_use_tasks_ts",
+      "label": "use-tasks.ts",
+      "file_type": "code",
+      "source_file": "src\\hooks\\use-tasks.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "use_tasks_usetasks",
+      "label": "useTasks()",
+      "file_type": "code",
+      "source_file": "src\\hooks\\use-tasks.ts",
+      "source_location": "L22"
+    },
+    {
+      "id": "src_lib_data_store_ts",
+      "label": "data-store.ts",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "data_store_scopedstoragekey",
+      "label": "scopedStorageKey()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L12"
+    },
+    {
+      "id": "data_store_taskstoragekey",
+      "label": "taskStorageKey()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "data_store_templatestoragekey",
+      "label": "templateStorageKey()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L20"
+    },
+    {
+      "id": "data_store_dailytaskstoragekey",
+      "label": "dailyTaskStorageKey()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L24"
+    },
+    {
+      "id": "data_store_topatientrow",
+      "label": "toPatientRow()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L94"
+    },
+    {
+      "id": "data_store_frompatientrow",
+      "label": "fromPatientRow()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L109"
+    },
+    {
+      "id": "data_store_toappointmentrow",
+      "label": "toAppointmentRow()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L119"
+    },
+    {
+      "id": "data_store_fromappointmentrow",
+      "label": "fromAppointmentRow()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L141"
+    },
+    {
+      "id": "data_store_resolveauditlabel",
+      "label": "resolveAuditLabel()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L160"
+    },
+    {
+      "id": "data_store_enrichappointmentswithprofiles",
+      "label": "enrichAppointmentsWithProfiles()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L168"
+    },
+    {
+      "id": "data_store_totasktemplaterow",
+      "label": "toTaskTemplateRow()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L219"
+    },
+    {
+      "id": "data_store_fromtasktemplaterow",
+      "label": "fromTaskTemplateRow()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L238"
+    },
+    {
+      "id": "data_store_totaskrow",
+      "label": "toTaskRow()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L252"
+    },
+    {
+      "id": "data_store_fromtaskrow",
+      "label": "fromTaskRow()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L275"
+    },
+    {
+      "id": "data_store_syncrowsbyid",
+      "label": "syncRowsById()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L293"
+    },
+    {
+      "id": "data_store_updatelocalcollection",
+      "label": "updateLocalCollection()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L337"
+    },
+    {
+      "id": "data_store_bootstrapcollection",
+      "label": "bootstrapCollection()",
+      "file_type": "code",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L344"
+    },
+    {
+      "id": "src_lib_supabase_ts",
+      "label": "supabase.ts",
+      "file_type": "code",
+      "source_file": "src\\lib\\supabase.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "supabase_setcurrentclinicid",
+      "label": "setCurrentClinicId()",
+      "file_type": "code",
+      "source_file": "src\\lib\\supabase.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "supabase_getcurrentclinicid",
+      "label": "getCurrentClinicId()",
+      "file_type": "code",
+      "source_file": "src\\lib\\supabase.ts",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_pages_appointments_tsx",
+      "label": "appointments.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "appointments_formatdategroup",
+      "label": "formatDateGroup()",
+      "file_type": "code",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "appointments_appointments",
+      "label": "Appointments()",
+      "file_type": "code",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_pages_dashboard_tsx",
+      "label": "dashboard.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "dashboard_getgreeting",
+      "label": "getGreeting()",
+      "file_type": "code",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L22"
+    },
+    {
+      "id": "dashboard_formatdatelong",
+      "label": "formatDateLong()",
+      "file_type": "code",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_pages_patients_tsx",
+      "label": "patients.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "patients_handleopenadd",
+      "label": "handleOpenAdd()",
+      "file_type": "code",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "patients_handleopenedit",
+      "label": "handleOpenEdit()",
+      "file_type": "code",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "patients_handlecloseform",
+      "label": "handleCloseForm()",
+      "file_type": "code",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "patients_handlesave",
+      "label": "handleSave()",
+      "file_type": "code",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L35"
+    },
+    {
+      "id": "patients_handledeleteconfirm",
+      "label": "handleDeleteConfirm()",
+      "file_type": "code",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L44"
+    },
+    {
+      "id": "src_pages_settings_tsx",
+      "label": "settings.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "settings_handletemplatesubmit",
+      "label": "handleTemplateSubmit()",
+      "file_type": "code",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L92"
+    },
+    {
+      "id": "settings_handleclosetemplatemodal",
+      "label": "handleCloseTemplateModal()",
+      "file_type": "code",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L114"
+    },
+    {
+      "id": "settings_handleprofilesubmit",
+      "label": "handleProfileSubmit()",
+      "file_type": "code",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L120"
+    },
+    {
+      "id": "src_pages_tasks_tsx",
+      "label": "tasks.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "tasks_formatdatedisplay",
+      "label": "formatDateDisplay()",
+      "file_type": "code",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "tasks_matchesnofilter",
+      "label": "matchesNoFilter()",
+      "file_type": "code",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "tasks_applyfilter",
+      "label": "applyFilter()",
+      "file_type": "code",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "tasks_tasks",
+      "label": "Tasks()",
+      "file_type": "code",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L48"
+    },
+    {
+      "id": "src_types_index_ts",
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src\\types\\index.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_utils_date_ts",
+      "label": "date.ts",
+      "file_type": "code",
+      "source_file": "src\\utils\\date.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "date_formatlocaldatekey",
+      "label": "formatLocalDateKey()",
+      "file_type": "code",
+      "source_file": "src\\utils\\date.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "date_parsedatekey",
+      "label": "parseDateKey()",
+      "file_type": "code",
+      "source_file": "src\\utils\\date.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "date_shiftdatekey",
+      "label": "shiftDateKey()",
+      "file_type": "code",
+      "source_file": "src\\utils\\date.ts",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_utils_storage_ts",
+      "label": "storage.ts",
+      "file_type": "code",
+      "source_file": "src\\utils\\storage.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "storage_getitem",
+      "label": "getItem()",
+      "file_type": "code",
+      "source_file": "src\\utils\\storage.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "storage_setitem",
+      "label": "setItem()",
+      "file_type": "code",
+      "source_file": "src\\utils\\storage.ts",
+      "source_location": "L11"
+    },
+    {
+      "id": "storage_removeitem",
+      "label": "removeItem()",
+      "file_type": "code",
+      "source_file": "src\\utils\\storage.ts",
+      "source_location": "L19"
+    }
+  ],
+  "edges": [
+    {
+      "source": "vite_config_ts",
+      "target": "vite",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "vite.config.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "vite_config_ts",
+      "target": "plugin_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "vite.config.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "src_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "src_components_layout_sidebar",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "src_components_layout_header",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "src_pages_dashboard",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "src_pages_tasks",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "src_pages_patients",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "src_pages_appointments",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "src_pages_settings",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "app_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\main.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "client",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\main.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "src_app",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\main.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "src_index_css",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\main.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "src_auth_auth_context",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\main.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "src_auth_auth_gate",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\main.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "supabase_js",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "src_auth_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "src_auth_lib_supabase",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "auth_context_normalizecliniccode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "auth_context_fallbackclinicname",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "auth_context_fromclinicrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "auth_context_fromprofilerow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "auth_context_loadclinicbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "auth_context_createclinic",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "auth_context_resolveclinicforsession",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "auth_context_loadorcreateprofile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_context_tsx",
+      "target": "auth_context_authprovider",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L193",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_context_loadclinicbyid",
+      "target": "auth_context_fromclinicrow",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_context_createclinic",
+      "target": "auth_context_fromclinicrow",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_context_resolveclinicforsession",
+      "target": "auth_context_normalizecliniccode",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_context_resolveclinicforsession",
+      "target": "auth_context_fromclinicrow",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_context_resolveclinicforsession",
+      "target": "auth_context_createclinic",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_context_resolveclinicforsession",
+      "target": "auth_context_fallbackclinicname",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_context_loadorcreateprofile",
+      "target": "auth_context_loadclinicbyid",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_context_loadorcreateprofile",
+      "target": "auth_context_resolveclinicforsession",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_context_loadorcreateprofile",
+      "target": "auth_context_fromprofilerow",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-context.tsx",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_gate_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-gate.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_gate_tsx",
+      "target": "src_auth_auth_context",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-gate.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_gate_tsx",
+      "target": "src_auth_auth_screen",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-gate.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_gate_tsx",
+      "target": "auth_gate_authgate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-gate.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_screen_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-screen.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_screen_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-screen.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_screen_tsx",
+      "target": "src_auth_auth_context",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-screen.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_screen_tsx",
+      "target": "src_auth_components_ui_input",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-screen.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_screen_tsx",
+      "target": "src_auth_components_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-screen.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_screen_tsx",
+      "target": "auth_screen_handlesubmit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\auth\\auth-screen.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_card_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-card.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_card_tsx",
+      "target": "src_components_appointments_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-card.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_card_tsx",
+      "target": "src_components_appointments_ui_badge",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-card.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_card_tsx",
+      "target": "appointment_card_formatdate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-card.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_card_tsx",
+      "target": "appointment_card_formatdatetime",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-card.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_form_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-form.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_form_tsx",
+      "target": "src_components_appointments_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-form.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_form_tsx",
+      "target": "src_components_appointments_ui_input",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-form.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_form_tsx",
+      "target": "src_components_appointments_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-form.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_appointments_appointment_form_tsx",
+      "target": "appointment_form_appointmentform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\appointments\\appointment-form.tsx",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_dashboard_stats_card_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\dashboard\\stats-card.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_dashboard_stats_card_tsx",
+      "target": "stats_card_statscard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\dashboard\\stats-card.tsx",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_header_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_header_tsx",
+      "target": "src_components_layout_assets_icons_logo_maria_lujan_white_svg",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_header_tsx",
+      "target": "src_components_layout_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_header_tsx",
+      "target": "src_components_layout_auth_auth_context",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_header_tsx",
+      "target": "src_components_layout_lib_supabase",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_header_tsx",
+      "target": "src_components_layout_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_header_tsx",
+      "target": "header_gettodayshort",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_sidebar_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\sidebar.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_sidebar_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\sidebar.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_sidebar_tsx",
+      "target": "src_components_layout_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\sidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_sidebar_tsx",
+      "target": "src_components_layout_lib_supabase",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\sidebar.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_layout_sidebar_tsx",
+      "target": "src_components_layout_auth_auth_context",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\sidebar.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_patients_patient_card_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\patients\\patient-card.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_patients_patient_card_tsx",
+      "target": "src_components_patients_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\patients\\patient-card.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_patients_patient_form_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\patients\\patient-form.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_patients_patient_form_tsx",
+      "target": "src_components_patients_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\patients\\patient-form.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_patients_patient_form_tsx",
+      "target": "src_components_patients_ui_input",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\patients\\patient-form.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_patients_patient_form_tsx",
+      "target": "src_components_patients_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\patients\\patient-form.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_patients_patient_form_tsx",
+      "target": "patient_form_patientform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\patients\\patient-form.tsx",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_tasks_task_card_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_tasks_task_card_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_tasks_task_card_tsx",
+      "target": "src_components_tasks_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_tasks_task_card_tsx",
+      "target": "src_components_tasks_ui_badge",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_tasks_task_card_tsx",
+      "target": "task_card_handlesavenumber",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_tasks_task_card_tsx",
+      "target": "task_card_handlekeydown",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_tasks_task_card_tsx",
+      "target": "task_card_string",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L151",
+      "weight": 1.0
+    },
+    {
+      "source": "task_card_handlekeydown",
+      "target": "task_card_handlesavenumber",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-card.tsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_tasks_task_list_tsx",
+      "target": "src_components_tasks_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-list.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_tasks_task_list_tsx",
+      "target": "src_components_tasks_task_card",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\tasks\\task-list.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_badge_tsx",
+      "target": "src_components_ui_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\badge.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_badge_tsx",
+      "target": "badge_badge",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\badge.tsx",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_button_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\button.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_button_tsx",
+      "target": "button_button",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\button.tsx",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_input_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\input.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_modal_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\modal.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_modal_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\modal.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_modal_tsx",
+      "target": "modal_modal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\modal.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_modal_tsx",
+      "target": "modal_confirmmodal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\modal.tsx",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data_seed_ts",
+      "target": "src_data_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\data\\seed.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data_seed_ts",
+      "target": "seed_generatedailytasks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\data\\seed.ts",
+      "source_location": "L314",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_appointments_ts",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-appointments.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_appointments_ts",
+      "target": "src_hooks_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-appointments.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_appointments_ts",
+      "target": "src_hooks_data_seed",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-appointments.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_appointments_ts",
+      "target": "src_hooks_lib_data_store",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-appointments.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_appointments_ts",
+      "target": "src_hooks_auth_auth_context",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-appointments.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_appointments_ts",
+      "target": "use_appointments_useappointments",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-appointments.ts",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_patients_ts",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-patients.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_patients_ts",
+      "target": "src_hooks_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-patients.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_patients_ts",
+      "target": "src_hooks_data_seed",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-patients.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_patients_ts",
+      "target": "src_hooks_lib_data_store",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-patients.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_patients_ts",
+      "target": "use_patients_usepatients",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-patients.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_settings_ts",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-settings.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_settings_ts",
+      "target": "src_hooks_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-settings.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_settings_ts",
+      "target": "src_hooks_data_seed",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-settings.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_settings_ts",
+      "target": "src_hooks_lib_data_store",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-settings.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_settings_ts",
+      "target": "use_settings_usesettings",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-settings.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_tasks_ts",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-tasks.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_tasks_ts",
+      "target": "src_hooks_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-tasks.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_tasks_ts",
+      "target": "src_hooks_data_seed",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-tasks.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_tasks_ts",
+      "target": "src_hooks_utils_storage",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-tasks.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_tasks_ts",
+      "target": "src_hooks_lib_data_store",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-tasks.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hooks_use_tasks_ts",
+      "target": "use_tasks_usetasks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\use-tasks.ts",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "src_lib_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "src_lib_data_seed",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "src_lib_utils_storage",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "src_lib_supabase",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_scopedstoragekey",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_taskstoragekey",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_templatestoragekey",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_dailytaskstoragekey",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_topatientrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_frompatientrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_toappointmentrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_fromappointmentrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_resolveauditlabel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_enrichappointmentswithprofiles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_totasktemplaterow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_fromtasktemplaterow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L238",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_totaskrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L252",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_fromtaskrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L275",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_syncrowsbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L293",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_updatelocalcollection",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L337",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data_store_ts",
+      "target": "data_store_bootstrapcollection",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L344",
+      "weight": 1.0
+    },
+    {
+      "source": "data_store_taskstoragekey",
+      "target": "data_store_scopedstoragekey",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "data_store_templatestoragekey",
+      "target": "data_store_scopedstoragekey",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "data_store_dailytaskstoragekey",
+      "target": "data_store_taskstoragekey",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\data-store.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_supabase_ts",
+      "target": "supabase_js",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\supabase.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_supabase_ts",
+      "target": "supabase_setcurrentclinicid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\supabase.ts",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_supabase_ts",
+      "target": "supabase_getcurrentclinicid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\supabase.ts",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "src_pages_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "src_pages_hooks_use_appointments",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "src_pages_hooks_use_patients",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "src_pages_components_appointments_appointment_card",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "src_pages_components_appointments_appointment_form",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "src_pages_components_ui_modal",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "src_pages_components_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "src_pages_utils_date",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "appointments_formatdategroup",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_appointments_tsx",
+      "target": "appointments_appointments",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\appointments.tsx",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "src_pages_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "src_pages_hooks_use_tasks",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "src_pages_hooks_use_appointments",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "src_pages_components_dashboard_stats_card",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "src_pages_components_tasks_task_card",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "src_pages_components_appointments_appointment_card",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "src_pages_components_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "src_pages_utils_date",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "dashboard_getgreeting",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_dashboard_tsx",
+      "target": "dashboard_formatdatelong",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\dashboard.tsx",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "src_pages_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "src_pages_hooks_use_patients",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "src_pages_components_patients_patient_card",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "src_pages_components_patients_patient_form",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "src_pages_components_ui_modal",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "src_pages_components_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "patients_handleopenadd",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "patients_handleopenedit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "patients_handlecloseform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "patients_handlesave",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_patients_tsx",
+      "target": "patients_handledeleteconfirm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "patients_handlesave",
+      "target": "patients_handlecloseform",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\patients.tsx",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "src_pages_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "src_pages_hooks_use_settings",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "src_pages_auth_auth_context",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "src_pages_components_ui_badge",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "src_pages_components_ui_modal",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "src_pages_components_ui_input",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "src_pages_components_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "settings_handletemplatesubmit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "settings_handleclosetemplatemodal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_settings_tsx",
+      "target": "settings_handleprofilesubmit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\settings.tsx",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "src_pages_hooks_use_tasks",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "src_pages_components_tasks_task_list",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "src_pages_components_tasks_task_filters",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "src_pages_types",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "src_pages_components_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "src_pages_utils_date",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "tasks_formatdatedisplay",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "tasks_matchesnofilter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "tasks_applyfilter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_tasks_tsx",
+      "target": "tasks_tasks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\tasks.tsx",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_date_ts",
+      "target": "date_formatlocaldatekey",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\utils\\date.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_date_ts",
+      "target": "date_parsedatekey",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\utils\\date.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_date_ts",
+      "target": "date_shiftdatekey",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\utils\\date.ts",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "date_shiftdatekey",
+      "target": "date_parsedatekey",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\utils\\date.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "date_shiftdatekey",
+      "target": "date_formatlocaldatekey",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\utils\\date.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_storage_ts",
+      "target": "storage_getitem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\utils\\storage.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_storage_ts",
+      "target": "storage_setitem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\utils\\storage.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_storage_ts",
+      "target": "storage_removeitem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\utils\\storage.ts",
+      "source_location": "L19",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
