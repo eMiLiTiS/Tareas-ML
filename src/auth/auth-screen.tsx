@@ -1,26 +1,19 @@
 import React, { useState } from 'react'
-import { LockKeyhole, Mail, ShieldCheck } from 'lucide-react'
+import { LockKeyhole, ShieldCheck } from 'lucide-react'
 import { useAuth } from './auth-context'
 import { Input } from '../components/ui/input'
 import { Button } from '../components/ui/button'
 
-type AuthMode = 'login' | 'register'
-
 export function AuthScreen() {
-  const { signIn, signUp, isConfigured } = useAuth()
-  const [mode, setMode] = useState<AuthMode>('login')
+  const { signIn } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [clinicName, setClinicName] = useState('')
-  const [clinicCode, setClinicCode] = useState('')
   const [error, setError] = useState('')
-  const [info, setInfo] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setError('')
-    setInfo('')
 
     if (!email.trim() || !password.trim()) {
       setError('Email y contrasena son obligatorios.')
@@ -28,23 +21,10 @@ export function AuthScreen() {
     }
 
     setSubmitting(true)
-
-    if (mode === 'login') {
-      const result = await signIn(email.trim(), password)
-      if (result.error) {
-        setError(result.error)
-      }
-    } else {
-      const result = await signUp(email.trim(), password, clinicName.trim(), clinicCode.trim())
-      if (result.error) {
-        setError(result.error)
-      } else if (result.needsEmailConfirmation) {
-        setInfo('Revisa tu email para confirmar la cuenta antes de iniciar sesion.')
-      } else {
-        setInfo('Cuenta creada correctamente.')
-      }
+    const result = await signIn(email.trim(), password)
+    if (result.error) {
+      setError(result.error)
     }
-
     setSubmitting(false)
   }
 
@@ -62,7 +42,7 @@ export function AuthScreen() {
                 Acceso seguro a pacientes, citas y tareas.
               </h1>
               <p className="mt-4 max-w-md text-sm leading-6 text-white/80">
-                La app ya usa Supabase Auth. Solo usuarios con cuenta pueden entrar y acceder a la base de datos.
+                Solo usuarios con cuenta pueden acceder. Contacta al administrador si necesitas acceso.
               </p>
             </div>
             <div className="grid grid-cols-3 gap-3 text-xs">
@@ -84,46 +64,11 @@ export function AuthScreen() {
           <section className="p-6 sm:p-8 lg:p-10">
             <div className="mx-auto max-w-md">
               <div className="mb-8">
-                <p className="text-sm font-medium text-rose-500">
-                  {mode === 'login' ? 'Iniciar sesion' : 'Crear cuenta'}
-                </p>
-                <h2 className="mt-2 text-3xl font-semibold text-stone-900">
-                  {mode === 'login' ? 'Entrar a la aplicacion' : 'Registrar nuevo acceso'}
-                </h2>
+                <p className="text-sm font-medium text-rose-500">Iniciar sesion</p>
+                <h2 className="mt-2 text-3xl font-semibold text-stone-900">Entrar a la aplicacion</h2>
                 <p className="mt-3 text-sm leading-6 text-stone-500">
-                  {isConfigured
-                    ? 'Usa tu cuenta de Supabase para acceder.'
-                    : 'Supabase aun no esta configurado en este entorno.'}
+                  Usa tu cuenta para acceder.
                 </p>
-              </div>
-
-              <div className="mb-6 inline-flex rounded-2xl bg-stone-100 p-1">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setMode('login')
-                    setError('')
-                    setInfo('')
-                  }}
-                  className={`rounded-2xl px-4 py-2 text-sm font-medium ${
-                    mode === 'login' ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-500'
-                  }`}
-                >
-                  Entrar
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setMode('register')
-                    setError('')
-                    setInfo('')
-                  }}
-                  className={`rounded-2xl px-4 py-2 text-sm font-medium ${
-                    mode === 'register' ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-500'
-                  }`}
-                >
-                  Crear cuenta
-                </button>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -139,30 +84,11 @@ export function AuthScreen() {
                 <Input
                   label="Contrasena"
                   type="password"
-                  placeholder="Minimo 6 caracteres"
+                  placeholder="Tu contrasena"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
+                  autoComplete="current-password"
                 />
-
-                {mode === 'register' && (
-                  <>
-                    <Input
-                      label="Nombre de la clinica"
-                      placeholder="Ej: Clinica Central"
-                      value={clinicName}
-                      onChange={(e) => setClinicName(e.target.value)}
-                      hint="Si no introduces codigo, se creara una clinica nueva con este nombre."
-                    />
-                    <Input
-                      label="Codigo de clinica (opcional)"
-                      placeholder="Ej: ABC123"
-                      value={clinicCode}
-                      onChange={(e) => setClinicCode(e.target.value.toUpperCase())}
-                      hint="Si lo rellenas, el usuario se unira a una clinica existente."
-                    />
-                  </>
-                )}
 
                 {error && (
                   <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
@@ -170,19 +96,9 @@ export function AuthScreen() {
                   </div>
                 )}
 
-                {info && (
-                  <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
-                    {info}
-                  </div>
-                )}
-
-                <Button type="submit" size="lg" fullWidth disabled={submitting || !isConfigured}>
-                  {mode === 'login' ? <LockKeyhole size={16} /> : <Mail size={16} />}
-                  {submitting
-                    ? 'Procesando...'
-                    : mode === 'login'
-                    ? 'Entrar'
-                    : 'Crear cuenta'}
+                <Button type="submit" size="lg" fullWidth disabled={submitting}>
+                  <LockKeyhole size={16} />
+                  {submitting ? 'Procesando...' : 'Entrar'}
                 </Button>
               </form>
             </div>
