@@ -7,6 +7,7 @@ import { Tasks } from './pages/tasks'
 import { Patients } from './pages/patients'
 import { Appointments } from './pages/appointments'
 import { Settings } from './pages/settings'
+import { Checklist } from './pages/checklist'
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('dashboard')
@@ -24,6 +25,8 @@ function App() {
         return <Appointments />
       case 'configuracion':
         return <Settings />
+      case 'checklist':
+        return <Checklist />
       default:
         return <Dashboard onNavigate={setCurrentPage} />
     }

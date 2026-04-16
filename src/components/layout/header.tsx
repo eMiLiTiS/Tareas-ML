@@ -15,6 +15,7 @@ const pageTitles: Record<Page, string> = {
   pacientes: 'Pacientes',
   citas: 'Citas',
   configuracion: 'Configuracion',
+  checklist: 'Checklist operativo',
 }
 
 function getTodayShort() {

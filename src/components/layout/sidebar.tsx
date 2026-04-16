@@ -1,5 +1,5 @@
 import React from 'react'
-import { LayoutDashboard, CheckSquare, Users, Calendar, Settings, X, LogOut } from 'lucide-react'
+import { LayoutDashboard, CheckSquare, Users, Calendar, Settings, X, LogOut, ClipboardList } from 'lucide-react'
 import type { Page } from '../../types'
 import { isSupabaseConfigured } from '../../lib/supabase'
 import { useAuth } from '../../auth/auth-context'
@@ -16,6 +16,7 @@ const navItems: { page: Page; label: string; icon: React.ReactNode }[] = [
   { page: 'tareas', label: 'Tareas', icon: <CheckSquare size={18} /> },
   { page: 'pacientes', label: 'Pacientes', icon: <Users size={18} /> },
   { page: 'citas', label: 'Citas', icon: <Calendar size={18} /> },
+  { page: 'checklist', label: 'Checklist', icon: <ClipboardList size={18} /> },
   { page: 'configuracion', label: 'Configuracion', icon: <Settings size={18} /> },
 ]
 
