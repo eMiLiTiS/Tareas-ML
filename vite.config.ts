@@ -7,7 +7,11 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'icon.svg'],
+      includeAssets: [
+        'favicon_16_out.png',
+        'favicon_32_out.png',
+        'apple_touch_icon_out.png'
+      ],
       manifest: {
         name: 'Espacio María Luján · Tareas',
         short_name: 'Tareas ML',
