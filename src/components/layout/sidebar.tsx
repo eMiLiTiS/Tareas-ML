@@ -65,7 +65,7 @@ export function Sidebar({ currentPage, onNavigate, isOpen, onClose }: SidebarPro
 
           <button
             onClick={onClose}
-            className="rounded-lg p-1.5 text-stone-400 transition-colors hover:bg-stone-100 hover:text-stone-600 lg:hidden"
+            className="rounded-lg p-2.5 text-stone-400 transition-colors hover:bg-stone-100 hover:text-stone-600 lg:hidden"
             aria-label="Cerrar menu"
           >
             <X size={18} />
@@ -86,7 +86,7 @@ export function Sidebar({ currentPage, onNavigate, isOpen, onClose }: SidebarPro
                   onClose()
                 }}
                 className={[
-                  'flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-150',
+                  'flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition-all duration-150',
                   isActive
                     ? 'bg-rose-50 text-rose-600'
                     : 'text-stone-600 hover:bg-stone-50 hover:text-stone-800',
@@ -118,7 +118,7 @@ export function Sidebar({ currentPage, onNavigate, isOpen, onClose }: SidebarPro
                 void signOut()
                 onClose()
               }}
-              className="mt-3 inline-flex items-center gap-2 rounded-xl border border-stone-200 px-3 py-2 text-xs font-medium text-stone-600 hover:bg-stone-50"
+              className="mt-3 inline-flex items-center gap-2 rounded-xl border border-stone-200 px-3 py-2.5 text-xs font-medium text-stone-600 hover:bg-stone-50"
             >
               <LogOut size={13} />
               Cerrar sesion

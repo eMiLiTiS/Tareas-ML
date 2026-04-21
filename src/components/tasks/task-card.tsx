@@ -79,14 +79,14 @@ export function TaskCard({ task, onAnswer, onReset }: TaskCardProps) {
             <div className="flex gap-2">
               <button
                 onClick={() => onAnswer(task.id, true)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 active:bg-emerald-200 transition-colors"
+                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 active:bg-emerald-200 transition-colors"
               >
                 <Check size={13} />
                 Sí
               </button>
               <button
                 onClick={() => onAnswer(task.id, false)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-rose-50 text-rose-600 border border-rose-200 hover:bg-rose-100 active:bg-rose-200 transition-colors"
+                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium bg-rose-50 text-rose-600 border border-rose-200 hover:bg-rose-100 active:bg-rose-200 transition-colors"
               >
                 <X size={13} />
                 No
@@ -107,12 +107,12 @@ export function TaskCard({ task, onAnswer, onReset }: TaskCardProps) {
                     }}
                     onKeyDown={handleKeyDown}
                     placeholder="0"
-                    className="w-24 pl-7 pr-2 py-1.5 text-xs rounded-xl border border-stone-200 focus:border-rose-300 focus:ring-2 focus:ring-rose-100 outline-none text-stone-800"
+                    className="w-28 pl-7 pr-2 py-2.5 text-sm rounded-xl border border-stone-200 focus:border-rose-300 focus:ring-2 focus:ring-rose-100 outline-none text-stone-800"
                   />
                 </div>
                 <button
                   onClick={handleSaveNumber}
-                  className="px-3 py-1.5 rounded-xl text-xs font-medium bg-rose-500 text-white hover:bg-rose-600 transition-colors"
+                  className="px-4 py-2.5 rounded-xl text-xs font-medium bg-rose-500 text-white hover:bg-rose-600 transition-colors"
                 >
                   Guardar
                 </button>
@@ -155,7 +155,7 @@ export function TaskCard({ task, onAnswer, onReset }: TaskCardProps) {
           </div>
           <button
             onClick={() => onReset(task.id)}
-            className="flex items-center gap-1 text-xs text-stone-400 hover:text-stone-600 transition-colors"
+            className="flex items-center gap-1 py-1.5 px-2 rounded-lg text-xs text-stone-400 hover:text-stone-600 hover:bg-stone-100 transition-colors"
             title="Cambiar respuesta"
           >
             <RotateCcw size={11} />

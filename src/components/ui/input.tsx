@@ -22,7 +22,7 @@ export function Input({ label, error, hint, className = '', id, ...props }: Inpu
       <input
         id={inputId}
         className={[
-          'w-full px-3 py-2 rounded-xl border text-sm text-stone-800 placeholder-stone-400',
+          'w-full px-3 py-2.5 rounded-xl border text-base text-stone-800 placeholder-stone-400',
           'bg-white transition-all duration-150 outline-none',
           error
             ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
@@ -65,7 +65,7 @@ export function Textarea({ label, error, hint, className = '', id, ...props }: T
       <textarea
         id={inputId}
         className={[
-          'w-full px-3 py-2 rounded-xl border text-sm text-stone-800 placeholder-stone-400 resize-none',
+          'w-full px-3 py-2.5 rounded-xl border text-base text-stone-800 placeholder-stone-400 resize-none',
           'bg-white transition-all duration-150 outline-none',
           error
             ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
@@ -108,7 +108,7 @@ export function Select({ label, error, options, className = '', id, ...props }: 
       <select
         id={inputId}
         className={[
-          'w-full px-3 py-2 rounded-xl border text-sm text-stone-800 bg-white',
+          'w-full px-3 py-2.5 rounded-xl border text-base text-stone-800 bg-white',
           'transition-all duration-150 outline-none appearance-none cursor-pointer',
           error
             ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'

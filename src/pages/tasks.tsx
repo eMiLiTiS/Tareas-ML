@@ -77,20 +77,20 @@ export function Tasks() {
       <div className="flex items-center gap-3 rounded-2xl border border-stone-200 bg-white p-3 shadow-sm">
         <button
           onClick={() => setSelectedDate((date) => shiftDateKey(date, -1))}
-          className="rounded-xl p-2 text-stone-500 transition-colors hover:bg-stone-100"
+          className="rounded-xl p-2.5 text-stone-500 transition-colors hover:bg-stone-100"
           aria-label="Dia anterior"
         >
           <ChevronLeft size={18} />
         </button>
 
-        <div className="flex-1 text-center">
-          <p className="text-sm font-semibold capitalize text-stone-800">{formatDateDisplay(selectedDate)}</p>
+        <div className="flex-1 min-w-0 text-center">
+          <p className="truncate text-sm font-semibold capitalize text-stone-800">{formatDateDisplay(selectedDate)}</p>
           <p className="text-xs text-stone-400">{selectedDate}</p>
         </div>
 
         <button
           onClick={() => setSelectedDate((date) => shiftDateKey(date, 1))}
-          className="rounded-xl p-2 text-stone-500 transition-colors hover:bg-stone-100"
+          className="rounded-xl p-2.5 text-stone-500 transition-colors hover:bg-stone-100"
           aria-label="Dia siguiente"
         >
           <ChevronRight size={18} />
@@ -99,14 +99,14 @@ export function Tasks() {
         {selectedDate !== today && (
           <button
             onClick={() => setSelectedDate(today)}
-            className="rounded-xl bg-rose-50 px-3 py-1.5 text-xs font-medium text-rose-500 transition-colors hover:bg-rose-100"
+            className="rounded-xl bg-rose-50 px-3 py-2 text-xs font-medium text-rose-500 transition-colors hover:bg-rose-100"
           >
             Hoy
           </button>
         )}
       </div>
 
-      <div className="grid grid-cols-4 gap-2">
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         {[
           { label: 'Total', value: tasks.length, color: 'bg-stone-50 text-stone-600' },
           { label: 'Pendientes', value: stats.pending, color: 'bg-amber-50 text-amber-600' },

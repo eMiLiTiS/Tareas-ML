@@ -23,12 +23,15 @@ interface UseChecklistResult {
 
 export function useChecklist(tipo: ChecklistTipo, fecha: string): UseChecklistResult {
   const { session } = useAuth()
+  const [allTemplates, setAllTemplates] = useState<ChecklistTemplate[]>(() =>
+    checklistTemplateStore.load()
+  )
   const [completions, setCompletions] = useState<ChecklistCompletion[]>([])
   const [loading, setLoading] = useState(true)
 
   const templates = useMemo(
-    () => checklistTemplateStore.load().filter((t) => t.tipo === tipo),
-    [tipo]
+    () => allTemplates.filter((t) => t.tipo === tipo),
+    [allTemplates, tipo]
   )
 
   const { key, filters } = useMemo(() => {
@@ -40,6 +43,15 @@ export function useChecklist(tipo: ChecklistTipo, fecha: string): UseChecklistRe
     }
     return { key: fecha, filters: { fecha } }
   }, [tipo, fecha])
+
+  // Load templates from Supabase once per session
+  useEffect(() => {
+    let cancelled = false
+    checklistTemplateStore.loadAsync().then((data) => {
+      if (!cancelled) setAllTemplates(data)
+    })
+    return () => { cancelled = true }
+  }, [])
 
   useEffect(() => {
     let cancelled = false

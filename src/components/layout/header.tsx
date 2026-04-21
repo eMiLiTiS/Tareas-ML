@@ -42,8 +42,8 @@ export function Header({ currentPage, onOpenSidebar }: HeaderProps) {
         </button>
 
         <div className="flex min-w-0 flex-1 items-center gap-2">
-          <div className="flex h-7 items-center justify-center rounded-lg bg-rose-500 px-2">
-            <span className="text-xs font-semibold text-white">
+          <div className="flex h-7 items-center justify-center rounded-lg bg-rose-500 px-2 overflow-hidden">
+            <span className="max-w-32 truncate text-xs font-semibold text-white">
               {profile?.clinicName || 'Clinica'}
             </span>
           </div>
@@ -56,7 +56,7 @@ export function Header({ currentPage, onOpenSidebar }: HeaderProps) {
           {isSupabaseConfigured ? (
             <>
               {(profile?.nombre || session?.user.email) && (
-                <span className="hidden max-w-44 truncate text-xs text-stone-500 md:inline">
+                <span className="hidden max-w-44 truncate text-xs text-stone-500 lg:inline">
                   {profile?.nombre || session?.user.email}
                 </span>
               )}

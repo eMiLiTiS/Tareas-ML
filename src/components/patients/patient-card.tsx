@@ -25,18 +25,18 @@ export function PatientCard({ patient, onEdit, onDelete }: PatientCardProps) {
           </div>
         </div>
 
-        {/* Actions (visible on hover) */}
-        <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+        {/* Actions (always visible on mobile, hover on desktop) */}
+        <div className="flex items-center gap-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
           <button
             onClick={() => onEdit(patient)}
-            className="p-1.5 rounded-lg text-stone-400 hover:text-rose-500 hover:bg-rose-50 transition-colors"
+            className="p-2 rounded-lg text-stone-400 hover:text-rose-500 hover:bg-rose-50 transition-colors"
             title="Editar paciente"
           >
             <Edit2 size={14} />
           </button>
           <button
             onClick={() => onDelete(patient.id)}
-            className="p-1.5 rounded-lg text-stone-400 hover:text-red-500 hover:bg-red-50 transition-colors"
+            className="p-2 rounded-lg text-stone-400 hover:text-red-500 hover:bg-red-50 transition-colors"
             title="Eliminar paciente"
           >
             <Trash2 size={14} />

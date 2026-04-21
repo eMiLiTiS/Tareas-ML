@@ -55,7 +55,7 @@ export function Modal({ isOpen, onClose, title, children, size = 'md' }: ModalPr
           <h2 className="text-base font-semibold text-stone-800">{title}</h2>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-stone-400 hover:text-stone-600 hover:bg-stone-100 transition-colors"
+            className="p-2.5 rounded-lg text-stone-400 hover:text-stone-600 hover:bg-stone-100 transition-colors"
           >
             <X size={18} />
           </button>
@@ -99,7 +99,7 @@ export function ConfirmModal({
       <div className="flex gap-2 justify-end">
         <button
           onClick={onClose}
-          className="px-4 py-2 text-sm font-medium text-stone-600 bg-stone-100 hover:bg-stone-200 rounded-xl transition-colors"
+          className="px-4 py-2.5 text-sm font-medium text-stone-600 bg-stone-100 hover:bg-stone-200 rounded-xl transition-colors"
         >
           {cancelLabel}
         </button>
@@ -108,7 +108,7 @@ export function ConfirmModal({
             onConfirm()
             onClose()
           }}
-          className={`px-4 py-2 text-sm font-medium rounded-xl transition-colors ${confirmClass}`}
+          className={`px-4 py-2.5 text-sm font-medium rounded-xl transition-colors ${confirmClass}`}
         >
           {confirmLabel}
         </button>

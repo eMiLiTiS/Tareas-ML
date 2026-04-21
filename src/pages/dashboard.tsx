@@ -72,14 +72,14 @@ export function Dashboard({ onNavigate }: DashboardProps) {
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <StatsCard icon={<Clock size={18} />} value={stats.pending} label="Pendientes" color="amber" />
         <StatsCard icon={<CheckCircle2 size={18} />} value={stats.done} label="Completadas" color="emerald" />
         <StatsCard icon={<XCircle size={18} />} value={stats.no} label="No realizadas" color="rose" />
         <StatsCard icon={<Hash size={18} />} value={stats.numbers} label="Registros" color="indigo" />
       </div>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="rounded-2xl border border-stone-100 bg-white p-4 shadow-sm">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-base font-semibold text-stone-800">Tareas pendientes</h2>

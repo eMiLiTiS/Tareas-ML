@@ -3,6 +3,32 @@ import { defaultChecklistTemplates } from '../data/checklist-seed'
 import { getItem, setItem } from '../utils/storage'
 import { getCurrentClinicId, isSupabaseConfigured, supabase } from './supabase'
 
+const TEMPLATE_CACHE_KEY = 'eml_checklist_templates_v1'
+
+type ChecklistTemplateRow = {
+  id: string
+  tipo: string
+  categoria: string
+  titulo: string
+  orden: number
+  activa: boolean
+}
+
+function toTemplateRow(t: ChecklistTemplate): ChecklistTemplateRow {
+  return { id: t.id, tipo: t.tipo, categoria: t.categoria, titulo: t.titulo, orden: t.orden, activa: t.activa }
+}
+
+function fromTemplateRow(row: ChecklistTemplateRow): ChecklistTemplate {
+  return {
+    id: row.id,
+    tipo: row.tipo as ChecklistTemplate['tipo'],
+    categoria: row.categoria,
+    titulo: row.titulo,
+    orden: row.orden,
+    activa: row.activa,
+  }
+}
+
 export function getWeekKey(año: number, semana: number) {
   return `week_${año}_${String(semana).padStart(2, '0')}`
 }
@@ -52,8 +78,47 @@ function fromRow(row: ChecklistCompletionRow): ChecklistCompletion {
 }
 
 export const checklistTemplateStore = {
+  /** Synchronous load from local seed (used as fallback). */
   load(): ChecklistTemplate[] {
     return defaultChecklistTemplates.filter((t) => t.activa)
+  },
+
+  /** Async load: tries Supabase first, seeds if empty, falls back to local seed. */
+  async loadAsync(): Promise<ChecklistTemplate[]> {
+    const fallback = defaultChecklistTemplates.filter((t) => t.activa)
+
+    // Return cached templates on repeat calls within the same session
+    const cached = getItem<ChecklistTemplate[] | null>(TEMPLATE_CACHE_KEY, null)
+    if (cached && cached.length > 0) return cached
+
+    if (!isSupabaseConfigured || !supabase) return fallback
+
+    const { data, error } = await supabase
+      .from('checklist_templates')
+      .select('*')
+      .eq('activa', true)
+      .order('tipo')
+      .order('orden')
+
+    if (error) {
+      console.error('Error loading checklist templates from Supabase', error)
+      return fallback
+    }
+
+    if (data && data.length > 0) {
+      const templates = (data as ChecklistTemplateRow[]).map(fromTemplateRow)
+      setItem(TEMPLATE_CACHE_KEY, templates)
+      return templates
+    }
+
+    // Supabase has no templates yet — seed them
+    const { error: seedError } = await supabase
+      .from('checklist_templates')
+      .upsert(fallback.map(toTemplateRow), { onConflict: 'id' })
+    if (seedError) console.error('Error seeding checklist templates', seedError)
+
+    setItem(TEMPLATE_CACHE_KEY, fallback)
+    return fallback
   },
 }
 
@@ -138,7 +203,7 @@ export const checklistCompletionStore = {
     if (isSupabaseConfigured && supabase && clinicId !== 'local') {
       const { error } = await supabase
         .from('checklist_completions')
-        .upsert([toRow(newCompletion)], { onConflict: 'id' })
+        .upsert([toRow(newCompletion)], { onConflict: 'id', ignoreDuplicates: true })
       if (error) console.error('Error saving checklist completion', error)
     }
 

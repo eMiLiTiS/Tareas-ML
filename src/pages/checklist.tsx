@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronDown, ChevronRight, Check } from 'lucide-react'
+import { ChevronDown, ChevronRight, ChevronLeft, Check } from 'lucide-react'
 import type { ChecklistTipo } from '../types'
 import { useChecklist, getISOWeek } from '../hooks/use-checklist'
 import { formatLocalDateKey, shiftDateKey, parseDateKey } from '../utils/date'
@@ -78,13 +78,13 @@ function CategoryGroup({ categoria, items, completedIds, onToggle, progress }: C
                 <button
                   onClick={() => onToggle(item.id)}
                   className={[
-                    'flex w-full items-start gap-3 rounded-xl px-3 py-2.5 text-left transition-all duration-150',
+                    'flex w-full items-start gap-3 rounded-xl px-3 py-3 text-left transition-all duration-150',
                     done ? 'bg-emerald-50' : 'hover:bg-stone-50',
                   ].join(' ')}
                 >
                   <span
                     className={[
-                      'mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md border-2 transition-all duration-150',
+                      'mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 transition-all duration-150',
                       done
                         ? 'border-emerald-500 bg-emerald-500'
                         : 'border-stone-300 bg-white',
@@ -183,23 +183,24 @@ export function Checklist() {
   }
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-6">
+    <div className="mx-auto max-w-2xl px-4 py-6 lg:px-6">
       {/* Date / week navigation */}
       <div className="mb-4 flex items-center justify-between gap-2">
         <button
           onClick={() => navigate(-1)}
-          className="rounded-xl border border-stone-200 px-3 py-2 text-sm font-medium text-stone-600 transition-colors hover:bg-stone-50"
+          className="rounded-xl border border-stone-200 p-2.5 text-stone-600 transition-colors hover:bg-stone-50"
+          aria-label="Periodo anterior"
         >
-          ←
+          <ChevronLeft size={18} />
         </button>
-        <div className="flex flex-1 items-center justify-center gap-2">
+        <div className="flex flex-1 min-w-0 items-center justify-center gap-2">
           <span className="truncate text-center text-sm font-semibold capitalize text-stone-800">
             {dateLabel}
           </span>
           {!isToday && (
             <button
               onClick={() => setFecha(formatLocalDateKey())}
-              className="shrink-0 rounded-lg bg-rose-50 px-2.5 py-1 text-xs font-medium text-rose-600 transition-colors hover:bg-rose-100"
+              className="shrink-0 rounded-lg bg-rose-50 px-2.5 py-2 text-xs font-medium text-rose-600 transition-colors hover:bg-rose-100"
             >
               Hoy
             </button>
@@ -207,20 +208,21 @@ export function Checklist() {
         </div>
         <button
           onClick={() => navigate(1)}
-          className="rounded-xl border border-stone-200 px-3 py-2 text-sm font-medium text-stone-600 transition-colors hover:bg-stone-50"
+          className="rounded-xl border border-stone-200 p-2.5 text-stone-600 transition-colors hover:bg-stone-50"
+          aria-label="Periodo siguiente"
         >
-          →
+          <ChevronRight size={18} />
         </button>
       </div>
 
       {/* Tabs */}
-      <div className="mb-5 grid grid-cols-4 gap-1 rounded-2xl bg-stone-100 p-1">
+      <div className="mb-5 grid grid-cols-2 gap-1 rounded-2xl bg-stone-100 p-1 sm:grid-cols-4">
         {TABS.map(({ tipo: t, label }) => (
           <button
             key={t}
             onClick={() => setTipo(t)}
             className={[
-              'rounded-xl py-2 text-xs font-semibold transition-all duration-150',
+              'rounded-xl py-2.5 text-xs font-semibold transition-all duration-150',
               tipo === t
                 ? 'bg-white text-rose-600 shadow-sm'
                 : 'text-stone-500 hover:text-stone-700',

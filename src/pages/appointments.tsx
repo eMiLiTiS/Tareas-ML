@@ -143,7 +143,7 @@ export function Appointments() {
               key={value}
               onClick={() => setActiveFilter(value)}
               className={[
-                'flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all duration-150',
+                'flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium transition-all duration-150',
                 isActive
                   ? 'bg-rose-500 text-white shadow-sm'
                   : 'border border-stone-200 bg-white text-stone-600 hover:bg-stone-50',
