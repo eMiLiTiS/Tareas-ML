@@ -1,5 +1,5 @@
 import React from 'react'
-import { LayoutDashboard, CheckSquare, Users, Calendar, Settings, X, LogOut, ClipboardList } from 'lucide-react'
+import { LayoutDashboard, CheckSquare, Users, Calendar, Settings, X, LogOut, ClipboardList, BarChart2 } from 'lucide-react'
 import type { Page } from '../../types'
 import { isSupabaseConfigured } from '../../lib/supabase'
 import { useAuth } from '../../auth/auth-context'
@@ -13,11 +13,12 @@ interface SidebarProps {
 
 const navItems: { page: Page; label: string; icon: React.ReactNode }[] = [
   { page: 'dashboard', label: 'Dashboard', icon: <LayoutDashboard size={18} /> },
+  { page: 'checklist', label: 'Checklist', icon: <ClipboardList size={18} /> },
+  { page: 'resumen', label: 'Resumen', icon: <BarChart2 size={18} /> },
   { page: 'tareas', label: 'Tareas', icon: <CheckSquare size={18} /> },
   { page: 'pacientes', label: 'Pacientes', icon: <Users size={18} /> },
   { page: 'citas', label: 'Citas', icon: <Calendar size={18} /> },
-  { page: 'checklist', label: 'Checklist', icon: <ClipboardList size={18} /> },
-  { page: 'configuracion', label: 'Configuracion', icon: <Settings size={18} /> },
+  { page: 'configuracion', label: 'Configuración', icon: <Settings size={18} /> },
 ]
 
 function getTodayLabel() {

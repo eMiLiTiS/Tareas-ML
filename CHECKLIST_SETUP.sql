@@ -16,17 +16,23 @@ CREATE TABLE IF NOT EXISTS checklist_templates (
 
 -- 2. COMPLETIONS (per clinic, per date or week)
 CREATE TABLE IF NOT EXISTS checklist_completions (
-  id              UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
-  clinic_id       UUID        NOT NULL REFERENCES clinics(id) ON DELETE CASCADE,
-  template_id     TEXT        NOT NULL REFERENCES checklist_templates(id) ON DELETE CASCADE,
-  fecha           DATE,                          -- for apertura / durante_dia / cierre
-  semana          INTEGER,                       -- ISO week number, for semanal
-  año             INTEGER,                       -- year, for semanal
-  completado_por  UUID        REFERENCES auth.users(id) ON DELETE SET NULL,
-  completado_en   TIMESTAMPTZ,
-  notas           TEXT,
-  created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW()
+  id                      UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  clinic_id               UUID        NOT NULL REFERENCES clinics(id) ON DELETE CASCADE,
+  template_id             TEXT        NOT NULL REFERENCES checklist_templates(id) ON DELETE CASCADE,
+  fecha                   DATE,                          -- for apertura / durante_dia / cierre
+  semana                  INTEGER,                       -- ISO week number, for semanal
+  año                     INTEGER,                       -- year, for semanal
+  completado_por          UUID        REFERENCES auth.users(id) ON DELETE SET NULL,
+  completado_en           TIMESTAMPTZ,
+  completado_por_nombre   TEXT,                          -- display name at time of completion
+  notas                   TEXT,
+  cantidad                NUMERIC,                       -- optional quantity for numeric items
+  created_at              TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+-- Migration: add columns if table already exists
+ALTER TABLE checklist_completions ADD COLUMN IF NOT EXISTS cantidad NUMERIC;
+ALTER TABLE checklist_completions ADD COLUMN IF NOT EXISTS completado_por_nombre TEXT;
 
 -- Unique constraints via partial indexes (NULL-safe)
 CREATE UNIQUE INDEX IF NOT EXISTS uq_checklist_completions_daily

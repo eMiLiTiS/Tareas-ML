@@ -11,11 +11,12 @@ interface HeaderProps {
 
 const pageTitles: Record<Page, string> = {
   dashboard: 'Dashboard',
-  tareas: 'Tareas del dia',
+  tareas: 'Tareas del día',
   pacientes: 'Pacientes',
   citas: 'Citas',
-  configuracion: 'Configuracion',
+  configuracion: 'Configuración',
   checklist: 'Checklist operativo',
+  resumen: 'Resumen del día',
 }
 
 function getTodayShort() {

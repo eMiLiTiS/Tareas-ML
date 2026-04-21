@@ -1,28 +1,26 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import type { ChecklistCompletion, ChecklistTemplate, ChecklistTipo } from '../types'
 import { checklistCompletionStore, checklistTemplateStore, getWeekKey } from '../lib/checklist-store'
+import { getISOWeek } from '../utils/date'
 import { useAuth } from '../auth/auth-context'
 
-export function getISOWeek(date: Date): { semana: number; año: number } {
-  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
-  const dayNum = d.getUTCDay() || 7
-  d.setUTCDate(d.getUTCDate() + 4 - dayNum)
-  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1))
-  const semana = Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7)
-  return { semana, año: d.getUTCFullYear() }
-}
+// Re-export for backward compatibility with pages that imported from here
+export { getISOWeek } from '../utils/date'
 
 interface UseChecklistResult {
   templates: ChecklistTemplate[]
+  completions: ChecklistCompletion[]
   completedIds: Set<string>
+  completionByTemplateId: Map<string, ChecklistCompletion>
   toggle: (templateId: string) => Promise<void>
+  setCantidad: (templateId: string, cantidad: number | null) => Promise<void>
   loading: boolean
   progress: { total: number; done: number }
   progressByCategory: Record<string, { total: number; done: number }>
 }
 
 export function useChecklist(tipo: ChecklistTipo, fecha: string): UseChecklistResult {
-  const { session } = useAuth()
+  const { session, profile } = useAuth()
   const [allTemplates, setAllTemplates] = useState<ChecklistTemplate[]>(() =>
     checklistTemplateStore.load()
   )
@@ -44,7 +42,6 @@ export function useChecklist(tipo: ChecklistTipo, fecha: string): UseChecklistRe
     return { key: fecha, filters: { fecha } }
   }, [tipo, fecha])
 
-  // Load templates from Supabase once per session
   useEffect(() => {
     let cancelled = false
     checklistTemplateStore.loadAsync().then((data) => {
@@ -62,19 +59,39 @@ export function useChecklist(tipo: ChecklistTipo, fecha: string): UseChecklistRe
         setLoading(false)
       }
     })
-    return () => {
-      cancelled = true
-    }
+    return () => { cancelled = true }
   }, [key]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const completedIds = useMemo(() => new Set(completions.map((c) => c.templateId)), [completions])
 
+  const completionByTemplateId = useMemo(() => {
+    const map = new Map<string, ChecklistCompletion>()
+    for (const c of completions) map.set(c.templateId, c)
+    return map
+  }, [completions])
+
   const toggle = useCallback(
     async (templateId: string) => {
-      const next = await checklistCompletionStore.toggle(key, templateId, filters, session?.user.id)
+      const next = await checklistCompletionStore.toggle(
+        key, templateId, filters,
+        session?.user.id,
+        profile?.nombre || session?.user.email
+      )
       setCompletions(next)
     },
-    [key, filters, session?.user.id] // eslint-disable-line react-hooks/exhaustive-deps
+    [key, filters, session?.user.id, profile?.nombre, session?.user.email] // eslint-disable-line react-hooks/exhaustive-deps
+  )
+
+  const setCantidad = useCallback(
+    async (templateId: string, cantidad: number | null) => {
+      const next = await checklistCompletionStore.updateCantidad(
+        key, templateId, filters, cantidad,
+        session?.user.id,
+        profile?.nombre || session?.user.email
+      )
+      setCompletions(next)
+    },
+    [key, filters, session?.user.id, profile?.nombre, session?.user.email] // eslint-disable-line react-hooks/exhaustive-deps
   )
 
   const progress = useMemo(
@@ -95,5 +112,15 @@ export function useChecklist(tipo: ChecklistTipo, fecha: string): UseChecklistRe
     return result
   }, [templates, completedIds])
 
-  return { templates, completedIds, toggle, loading, progress, progressByCategory }
+  return {
+    templates,
+    completions,
+    completedIds,
+    completionByTemplateId,
+    toggle,
+    setCantidad,
+    loading,
+    progress,
+    progressByCategory,
+  }
 }

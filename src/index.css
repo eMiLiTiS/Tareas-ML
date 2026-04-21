@@ -9,10 +9,30 @@
     color: #292524;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
   }
 
   * {
     box-sizing: border-box;
+  }
+
+  /* Remove input[type=number] arrows on WebKit */
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+}
+
+/* Safe-area-aware bottom padding for mobile bottom nav (accounts for iPhone home indicator) */
+@media (max-width: 1023px) {
+  .pb-safe-nav {
+    padding-bottom: max(4rem, calc(3.5rem + env(safe-area-inset-bottom, 0px)));
   }
 }
 

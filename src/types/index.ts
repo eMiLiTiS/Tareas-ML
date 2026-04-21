@@ -4,7 +4,7 @@ export type TaskResponseType = 'boolean' | 'number'
 export type TaskStatus = 'pendiente' | 'respondida'
 export type TaskPriority = 'alta' | 'media' | 'baja'
 export type AppointmentStatus = 'proxima' | 'realizada' | 'cancelada'
-export type Page = 'dashboard' | 'tareas' | 'pacientes' | 'citas' | 'configuracion' | 'checklist'
+export type Page = 'dashboard' | 'tareas' | 'pacientes' | 'citas' | 'configuracion' | 'checklist' | 'resumen'
 export type ChecklistTipo = 'apertura' | 'durante_dia' | 'cierre' | 'semanal'
 
 export interface ChecklistTemplate {
@@ -25,7 +25,9 @@ export interface ChecklistCompletion {
   año?: number
   completadoPor?: string
   completadoEn?: string
+  completadoPorNombre?: string
   notas?: string
+  cantidad?: number | null
 }
 
 export interface Clinic {
