@@ -38,21 +38,8 @@ type ClinicRow = {
   access_code: string
 }
 
-type AuthMetadata = {
-  clinic_name?: string
-  clinic_code?: string
-}
-
+const DEFAULT_CLINIC_ID = 'bcfc7919-0e8b-48e4-9f90-72d1cfe87b78'
 const AuthContext = createContext<AuthContextValue | null>(null)
-
-function normalizeClinicCode(value: string | undefined) {
-  return value?.trim().toUpperCase() ?? ''
-}
-
-function fallbackClinicName(email: string) {
-  const local = email.split('@')[0]?.trim() || 'principal'
-  return `Clinica ${local}`
-}
 
 function fromClinicRow(row: ClinicRow): Clinic {
   return {
@@ -89,46 +76,8 @@ async function loadClinicById(clinicId: string): Promise<Clinic | null> {
   return fromClinicRow(data as ClinicRow)
 }
 
-async function createClinic(name: string): Promise<Clinic | null> {
-  if (!supabase) return null
-
-  const { data, error } = await supabase
-    .from('clinics')
-    .insert([{ nombre: name.trim() || 'Clinica principal' }])
-    .select('*')
-    .single()
-
-  if (error) {
-    console.error('Error creating clinic in Supabase', error)
-    return null
-  }
-
-  return fromClinicRow(data as ClinicRow)
-}
-
-async function resolveClinicForSession(session: Session): Promise<Clinic | null> {
-  if (!supabase) return null
-
-  const metadata = (session.user.user_metadata ?? {}) as AuthMetadata
-  const clinicCode = normalizeClinicCode(metadata.clinic_code)
-
-  if (clinicCode) {
-    const { data, error } = await supabase
-      .from('clinics')
-      .select('*')
-      .eq('access_code', clinicCode)
-      .maybeSingle()
-
-    if (error) {
-      console.error('Error resolving clinic by access code', error)
-    }
-
-    if (data) {
-      return fromClinicRow(data as ClinicRow)
-    }
-  }
-
-  return createClinic(metadata.clinic_name?.trim() || fallbackClinicName(session.user.email ?? 'principal'))
+async function resolveClinicForSession(_session: Session): Promise<Clinic | null> {
+  return loadClinicById(DEFAULT_CLINIC_ID)
 }
 
 async function loadOrCreateProfile(session: Session): Promise<{ profile: WorkerProfile | null; clinic: Clinic | null }> {
@@ -255,22 +204,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const { error } = await supabase.auth.signInWithPassword({ email, password })
         return { error: error?.message ?? null }
       },
-      async signUp(email, password, clinicName, clinicCode) {
+      async signUp(email, password, _clinicName, _clinicCode) {
         if (!supabase) {
           return { error: 'Supabase no esta configurado.', needsEmailConfirmation: false }
         }
 
-        const metadata: AuthMetadata = {}
-        if (clinicName.trim()) metadata.clinic_name = clinicName.trim()
-        if (normalizeClinicCode(clinicCode)) metadata.clinic_code = normalizeClinicCode(clinicCode)
-
         const { data, error } = await supabase.auth.signUp({
           email,
           password,
-          options: {
-            data: metadata,
-          },
         })
+
         const needsEmailConfirmation = !data.session
 
         return {
