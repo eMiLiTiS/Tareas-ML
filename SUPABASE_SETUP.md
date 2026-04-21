@@ -397,11 +397,17 @@ for select
 to authenticated
 using (true);
 
-create policy "insert clinics for authenticated users"
+alter table clinics enable row level security;
+
+drop policy if exists "read clinics for authenticated users" on clinics;
+drop policy if exists "insert clinics for authenticated users" on clinics;
+
+create policy "read clinics for authenticated users"
 on clinics
-for insert
+for select
 to authenticated
-with check (true);
+using (true);
+
 
 drop policy if exists "authenticated full access patients" on patients;
 drop policy if exists "authenticated full access appointments" on appointments;
