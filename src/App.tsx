@@ -10,6 +10,7 @@ import { Appointments } from './pages/appointments'
 import { Settings } from './pages/settings'
 import { Checklist } from './pages/checklist'
 import { Resumen } from './pages/resumen'
+import { ActividadSemanal } from './pages/actividad-semanal'
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('dashboard')
@@ -31,6 +32,8 @@ function App() {
         return <Checklist />
       case 'resumen':
         return <Resumen />
+      case 'actividad-semanal':
+        return <ActividadSemanal />
       default:
         return <Dashboard onNavigate={setCurrentPage} />
     }

@@ -55,6 +55,7 @@ export function useChecklist(tipo: ChecklistTipo, fecha: string): UseChecklistRe
 
   useEffect(() => {
     let cancelled = false
+    setCompletions([]) // clear stale data immediately — prevents prior user's data from showing during async load
     setLoading(true)
     checklistCompletionStore.load(key, filters, userId).then((data) => {
       if (!cancelled) {

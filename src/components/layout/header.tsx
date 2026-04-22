@@ -17,6 +17,7 @@ const pageTitles: Record<Page, string> = {
   configuracion: 'Configuración',
   checklist: 'Checklist operativo',
   resumen: 'Resumen del día',
+  'actividad-semanal': 'Actividad semanal',
 }
 
 function getTodayShort() {
