@@ -42,6 +42,9 @@ export function useChecklist(tipo: ChecklistTipo, fecha: string): UseChecklistRe
     return { key: fecha, filters: { fecha } }
   }, [tipo, fecha])
 
+  // For weekly items each worker tracks their own state; daily items are clinic-wide
+  const userId = tipo === 'semanal' ? session?.user.id : undefined
+
   useEffect(() => {
     let cancelled = false
     checklistTemplateStore.loadAsync().then((data) => {
@@ -53,14 +56,14 @@ export function useChecklist(tipo: ChecklistTipo, fecha: string): UseChecklistRe
   useEffect(() => {
     let cancelled = false
     setLoading(true)
-    checklistCompletionStore.load(key, filters).then((data) => {
+    checklistCompletionStore.load(key, filters, userId).then((data) => {
       if (!cancelled) {
         setCompletions(data)
         setLoading(false)
       }
     })
     return () => { cancelled = true }
-  }, [key]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [key, userId]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const completedIds = useMemo(() => new Set(completions.map((c) => c.templateId)), [completions])
 

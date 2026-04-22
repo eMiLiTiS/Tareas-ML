@@ -142,3 +142,39 @@ INSERT INTO checklist_templates (id, tipo, categoria, titulo, orden) VALUES
   ('chk-s-005','semanal','Revisión semanal','Logros del equipo',5),
   ('chk-s-006','semanal','Revisión semanal','Incidencias y soluciones',6)
 ON CONFLICT (id) DO NOTHING;
+
+-- ============================================================
+-- MIGRATION: Per-user weekly completions
+-- Run this block in Supabase SQL Editor on existing databases.
+-- New databases running the full script above get this automatically.
+-- ============================================================
+
+-- Step 1: Remove duplicate weekly rows keeping the newest per (clinic, template, week, user).
+-- This must run BEFORE the new unique index is created.
+WITH ranked AS (
+  SELECT id,
+    ROW_NUMBER() OVER (
+      PARTITION BY clinic_id, template_id, semana, año, completado_por
+      ORDER BY COALESCE(completado_en, created_at) DESC
+    ) AS rn
+  FROM checklist_completions
+  WHERE semana IS NOT NULL AND año IS NOT NULL
+)
+DELETE FROM checklist_completions
+WHERE id IN (SELECT id FROM ranked WHERE rn > 1);
+
+-- Step 2: Drop the old global-per-week unique index.
+-- It prevented multiple users from having separate records for the same weekly item.
+DROP INDEX IF EXISTS uq_checklist_completions_weekly;
+
+-- Step 3: New index — one record per (clinic, template, week, user).
+-- Each authenticated worker can now have their own completion for the same weekly item.
+-- Partial on IS NOT NULL so legacy anonymous rows (completado_por = NULL) are unaffected.
+CREATE UNIQUE INDEX IF NOT EXISTS uq_checklist_completions_weekly
+  ON checklist_completions(clinic_id, template_id, semana, año, completado_por)
+  WHERE semana IS NOT NULL AND año IS NOT NULL AND completado_por IS NOT NULL;
+
+-- Step 4: Supporting query index for per-user weekly loads.
+CREATE INDEX IF NOT EXISTS idx_checklist_completions_semana_user
+  ON checklist_completions(clinic_id, completado_por, año, semana)
+  WHERE semana IS NOT NULL AND año IS NOT NULL;

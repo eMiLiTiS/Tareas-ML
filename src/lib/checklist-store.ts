@@ -42,8 +42,12 @@ export function getWeekKey(año: number, semana: number) {
   return `week_${año}_${String(semana).padStart(2, '0')}`
 }
 
-function completionStorageKey(key: string) {
-  return `eml_checklist_${key}_${getCurrentClinicId() ?? 'local'}`
+// Weekly completions are scoped per-user so each worker has their own cache slot.
+// Daily completions are clinic-wide (one completion per item per day), so no user scope.
+function completionStorageKey(key: string, userId?: string) {
+  const clinicPart = getCurrentClinicId() ?? 'local'
+  if (userId) return `eml_checklist_${key}_${clinicPart}_u${userId.slice(0, 8)}`
+  return `eml_checklist_${key}_${clinicPart}`
 }
 
 type ChecklistCompletionRow = {
@@ -150,11 +154,19 @@ export const checklistTemplateStore = {
 }
 
 export const checklistCompletionStore = {
+  /**
+   * Load completions for a given key/filters.
+   * For weekly (semana+año) pass userId to scope results to that worker only —
+   * each worker tracks their own quantities independently.
+   * For daily (fecha) userId is omitted — daily items are clinic-wide.
+   * The resumen calls this without userId to get all workers' weekly entries.
+   */
   async load(
     key: string,
-    filters: { fecha?: string; semana?: number; año?: number }
+    filters: { fecha?: string; semana?: number; año?: number },
+    userId?: string
   ): Promise<ChecklistCompletion[]> {
-    const storageKey = completionStorageKey(key)
+    const storageKey = completionStorageKey(key, userId)
     const local = getItem<ChecklistCompletion[]>(storageKey, [])
 
     if (!isSupabaseConfigured || !supabase) return local
@@ -168,6 +180,8 @@ export const checklistCompletionStore = {
       query = query.eq('fecha', filters.fecha)
     } else if (filters.semana !== undefined && filters.año !== undefined) {
       query = query.eq('semana', filters.semana).eq('año', filters.año)
+      // Scope to current user so each worker sees only their own weekly state
+      if (userId) query = query.eq('completado_por', userId)
     }
 
     const { data, error } = await query
@@ -192,13 +206,14 @@ export const checklistCompletionStore = {
     return local
   },
 
-  /** Load all completions for a given date (daily + weekly for Resumen). */
+  /** Load all completions for a given date (daily + all users' weekly) for Resumen. */
   async loadAllForDate(fecha: string): Promise<{ daily: ChecklistCompletion[]; weekly: ChecklistCompletion[] }> {
     const [year, month, day] = fecha.split('-').map(Number)
     const d = new Date(year, month - 1, day)
     const { semana, año } = getISOWeek(d)
     const weekKey = getWeekKey(año, semana)
 
+    // No userId — resumen needs all workers' weekly completions
     const [daily, weekly] = await Promise.all([
       this.load(fecha, { fecha }),
       this.load(weekKey, { semana, año }),
@@ -213,7 +228,8 @@ export const checklistCompletionStore = {
     userId?: string,
     userName?: string
   ): Promise<ChecklistCompletion[]> {
-    const storageKey = completionStorageKey(key)
+    // Use user-scoped key for weekly so workers operate on their own cache slot
+    const storageKey = completionStorageKey(key, userId)
     const clinicId = getCurrentClinicId() ?? 'local'
     const current = getItem<ChecklistCompletion[]>(storageKey, [])
 
@@ -244,9 +260,23 @@ export const checklistCompletionStore = {
     setItem(storageKey, next)
 
     if (isSupabaseConfigured && supabase && clinicId !== 'local') {
+      let deleteStale = supabase
+        .from('checklist_completions')
+        .delete()
+        .eq('clinic_id', clinicId)
+        .eq('template_id', templateId)
+      if (filters.fecha) {
+        deleteStale = deleteStale.eq('fecha', filters.fecha)
+      } else if (filters.semana !== undefined && filters.año !== undefined) {
+        deleteStale = deleteStale.eq('semana', filters.semana).eq('año', filters.año)
+        // Only delete THIS user's stale record — never touch other workers' completions
+        if (userId) deleteStale = deleteStale.eq('completado_por', userId)
+      }
+      await deleteStale
+
       const { error } = await supabase
         .from('checklist_completions')
-        .upsert([toRow(newCompletion)], { onConflict: 'id', ignoreDuplicates: true })
+        .insert([toRow(newCompletion)])
       if (error) console.error('Error saving checklist completion', error)
     }
 
@@ -261,7 +291,8 @@ export const checklistCompletionStore = {
     userId?: string,
     userName?: string
   ): Promise<ChecklistCompletion[]> {
-    const storageKey = completionStorageKey(key)
+    // Use user-scoped key for weekly so workers operate on their own cache slot
+    const storageKey = completionStorageKey(key, userId)
     const clinicId = getCurrentClinicId() ?? 'local'
     const current = getItem<ChecklistCompletion[]>(storageKey, [])
     const existingIdx = current.findIndex((c) => c.templateId === templateId)
@@ -296,9 +327,23 @@ export const checklistCompletionStore = {
     setItem(storageKey, next)
 
     if (isSupabaseConfigured && supabase && clinicId !== 'local') {
+      let deleteStale = supabase
+        .from('checklist_completions')
+        .delete()
+        .eq('clinic_id', clinicId)
+        .eq('template_id', templateId)
+      if (filters.fecha) {
+        deleteStale = deleteStale.eq('fecha', filters.fecha)
+      } else if (filters.semana !== undefined && filters.año !== undefined) {
+        deleteStale = deleteStale.eq('semana', filters.semana).eq('año', filters.año)
+        // Only delete THIS user's stale record — never touch other workers' completions
+        if (userId) deleteStale = deleteStale.eq('completado_por', userId)
+      }
+      await deleteStale
+
       const { error } = await supabase
         .from('checklist_completions')
-        .upsert([toRow(newCompletion)], { onConflict: 'id', ignoreDuplicates: true })
+        .insert([toRow(newCompletion)])
       if (error) console.error('Error saving checklist completion with cantidad', error)
     }
 
